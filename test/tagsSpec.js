@@ -71,6 +71,16 @@ describe("Tags", function () {
 
                 expect(results).to.deep.equal(expected);
             });
+
+            specify("are ignored when no replacement object", function () {
+                var args = ["-sd=4", "--hello"],
+                    results = tags.parse(args, {}),
+                    expected = {
+                        hello: true,
+                    };
+
+                expect(results).to.deep.equal(expected);
+            });
         });
     });
 });
