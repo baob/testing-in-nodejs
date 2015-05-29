@@ -1,4 +1,4 @@
-var expect = require("../bower_components/chai/chai.js").expect;
+var expect = require("chai/chai.js").expect;
 var tags = require("../lib/tags.js");
 
 describe("Tags", function () {
