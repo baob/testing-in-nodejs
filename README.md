@@ -10,4 +10,4 @@ tutorial](http://code.tutsplus.com/tutorials/testing-in-nodejs--net-35018)
 ## TODO
 
 * Complete tutorial
-* find node.js equivalents for ruby's bundler, guard
+* find node.js equivalents for ruby's guard
