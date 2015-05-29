@@ -1,2 +1,5 @@
 README.html
 node_modules
+checkstyle.xml
+pmd.xml
+report.xml

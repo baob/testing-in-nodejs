@@ -23,13 +23,13 @@
   ],
   "devDependencies": {
     "chai": "^2.3.0",
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-complexity": "^0.3.0"
   },
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "mocha"
   },
