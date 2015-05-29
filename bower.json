@@ -1,0 +1,27 @@
+{
+  "name": "testing-in-nodejs",
+  "version": "0.0.1",
+  "authors": [
+    "baob <coder@onesandthrees.com>"
+  ],
+  "description": "javascript coding exercise",
+  "keywords": [
+    "javascript",
+    "node",
+    "mocha",
+    "chai",
+    "tutorial"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "chai": "2.3.0"
+  }
+}
