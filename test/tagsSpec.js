@@ -1,53 +1,55 @@
-var expect = require("chai/chai.js").expect;
-var tags = require("../lib/tags.js");
+'use strict';
 
-describe("Tags", function () {
+var expect = require('chai/chai.js').expect;
+var tags = require('../lib/tags.js');
 
-    describe("#parse()", function () {
+describe('Tags', function () {
 
-        it("should parse long formed tags", function () {
-            var args = ["--depth=4", "--hello=world"],
+    describe('#parse()', function () {
+
+        it('should parse long formed tags', function () {
+            var args = ['--depth=4', '--hello=world'],
                 results = tags.parse(args);
 
-            expect(results).to.have.a.property("hello", "world");
+            expect(results).to.have.a.property('hello', 'world');
         });
 
-        it("should parse long formed tags and parse integers", function () {
-            var args = ["--depth=4", "--hello=world"],
+        it('should parse long formed tags and parse integers', function () {
+            var args = ['--depth=4', '--hello=world'],
                 results = tags.parse(args);
 
-            expect(results).to.have.a.property("depth", 4);
+            expect(results).to.have.a.property('depth', 4);
         });
 
-        it("should fallback to defaults", function () {
-            var args = ["--depth=4", "--hello=world"],
-                defaults = { depth: 2, foo: "bar" },
+        it('should fallback to defaults', function () {
+            var args = ['--depth=4', '--hello=world'],
+                defaults = { depth: 2, foo: 'bar' },
                 results = tags.parse(args, defaults),
                 expected = {
                     depth: 4,
-                    foo: "bar",
-                    hello: "world"
+                    foo: 'bar',
+                    hello: 'world'
                 };
 
             expect(results).to.deep.equal(expected);
         });
 
 
-        it("should accept tags without values as a bool", function () {
-            var args = ["--searchContents"],
+        it('should accept tags without values as a bool', function () {
+            var args = ['--searchContents'],
                 results = tags.parse(args);
 
-            expect(results).to.have.a.property("searchContents", true);
+            expect(results).to.have.a.property('searchContents', true);
         });
 
-        describe("short formed tags", function () {
+        describe('short formed tags', function () {
 
-            specify("are accepted when replacements specified", function () {
-                var args = ["-sd=4", "-h"],
+            specify('are accepted when replacements specified', function () {
+                var args = ['-sd=4', '-h'],
                     replacements = {
-                        s: "searchContents",
-                        d: "depth",
-                        h: "hello"
+                        s: 'searchContents',
+                        d: 'depth',
+                        h: 'hello'
                     },
                     results = tags.parse(args, {}, replacements),
                     expected = {
@@ -59,24 +61,24 @@ describe("Tags", function () {
                 expect(results).to.deep.equal(expected);
             });
 
-            specify("are ignored when no corresponding replacement", function () {
-                var args = ["-sd=4"],
+            specify('are ignored when no corresponding replacement', function () {
+                var args = ['-sd=4'],
                     replacements = {
-                        d: "depth",
+                        d: 'depth'
                     },
                     results = tags.parse(args, {}, replacements),
                     expected = {
-                        depth: 4,
+                        depth: 4
                     };
 
                 expect(results).to.deep.equal(expected);
             });
 
-            specify("are ignored when no replacement object", function () {
-                var args = ["-sd=4", "--hello"],
+            specify('are ignored when no replacement object', function () {
+                var args = ['-sd=4', '--hello'],
                     results = tags.parse(args, {}),
                     expected = {
-                        hello: true,
+                        hello: true
                     };
 
                 expect(results).to.deep.equal(expected);
