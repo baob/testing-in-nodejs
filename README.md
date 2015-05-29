@@ -7,7 +7,7 @@ tutorial](http://code.tutsplus.com/tutorials/testing-in-nodejs--net-35018)
 
     git clone
     npm install -g mocha
-    bower install
+    npm install
 
 ### Tests
 
@@ -15,7 +15,7 @@ tutorial](http://code.tutsplus.com/tutorials/testing-in-nodejs--net-35018)
 
 ## NOTES
 
-* Code is mine, specs are (largely) copied, with some of my additions
+* Code is (largely) mine, specs are (largely) copied, with some of my additions
 
 ## TODO
 
