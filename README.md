@@ -11,12 +11,15 @@ Status](https://travis-ci.org/baob/testing-in-nodejs.svg?branch=master)](https:/
 ## INSTALL
 
     git clone
-    npm install -g mocha
     npm install
 
 ### Tests
 
     mocha
+
+or
+
+    npm test
 
 ## NOTES
 
