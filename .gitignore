@@ -3,3 +3,5 @@ node_modules
 checkstyle.xml
 pmd.xml
 report.xml
+.ruby-gemset
+.ruby-version
