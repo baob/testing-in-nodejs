@@ -2,7 +2,9 @@
     "globals": {
         "describe": false,
         "it": false,
-        "specify": false
+        "specify": false,
+        "before": false,
+        "after": false
     },
     "rules": {
         "indent": [
