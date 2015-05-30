@@ -3,6 +3,11 @@
 Javascript coding exercise following [this
 tutorial](http://code.tutsplus.com/tutorials/testing-in-nodejs--net-35018)
 
+## Travis Status
+
+[![Build
+Status](https://travis-ci.org/baob/testing-in-nodejs.svg?branch=master)](https://travis-ci.org/baob/testing-in-nodejs)
+
 ## INSTALL
 
     git clone
