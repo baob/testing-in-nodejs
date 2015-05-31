@@ -26,11 +26,14 @@
 require 'terminal-notifier-guard'
 TerminalNotifier::Guard.notify('terminal-notifier-guard is installed')
 
-guard "cucumber" do
-  watch(%r{^features/.+\.feature$})
-  watch(%r{^features/support/.+$})          { "features" }
+group :red_green_refactor, halt_on_fail: true do
+  guard :cucumber, :notification => true do
+    watch(%r{^features/.+\.feature$})
+    watch(%r{^features/support/.+$})          { "features" }
 
-  watch(%r{^features/step_definitions/(.+)_steps\.rb$}) do |m|
-    Dir[File.join("**/#{m[1]}.feature")][0] || "features"
+    watch(%r{^features/step_definitions/(.+)_steps\.rb$}) do |m|
+      Dir[File.join("**/#{m[1]}.feature")][0] || "features"
+    end
   end
+
 end
