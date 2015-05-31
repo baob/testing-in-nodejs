@@ -23,6 +23,9 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
+require 'terminal-notifier-guard'
+TerminalNotifier::Guard.notify('terminal-notifier-guard is installed')
+
 guard "cucumber" do
   watch(%r{^features/.+\.feature$})
   watch(%r{^features/support/.+$})          { "features" }
