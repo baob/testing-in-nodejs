@@ -5,5 +5,7 @@ group :development do
   gem 'aruba'
   gem 'cucumber'
   gem 'guard-cucumber'
+  gem 'rspec'
+  gem 'guard-rspec'
   gem 'terminal-notifier-guard'
 end
