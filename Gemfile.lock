@@ -1,10 +1,16 @@
-GEM
-  remote: https://rubygems.org/
+GIT
+  remote: https://github.com/cucumber/aruba
+  revision: 51cf61ed9e6ce31ce24014115515b5a3ee8b9832
+  ref: 51cf61ed9e6ce31ce24014115515b5a3ee8b9832
   specs:
     aruba (0.6.2)
       childprocess (>= 0.3.6)
       cucumber (>= 1.1.1)
       rspec-expectations (>= 2.7.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -87,7 +93,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aruba
+  aruba!
   cucumber
   guard
   guard-cucumber
