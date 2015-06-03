@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'bundler'
+Bundler.require(:default, :development)
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 #
 RSpec.configure do |config|
@@ -8,10 +12,6 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
-
-  # This setting enables warnings. It's recommended, but in some cases may
-  # be too noisy due to issues in dependencies.
-  config.warnings = true
 
   # Many RSpec users commonly either run the entire suite or an individual
   # file, and it's useful to allow more verbose output when running an
@@ -26,3 +26,5 @@ RSpec.configure do |config|
   config.order = :random
   Kernel.srand config.seed
 end
+
+Dir.glob(::File.expand_path('../support/*.rb', __FILE__)).each { |f| puts "requiring #{f}" ; require_relative f }
