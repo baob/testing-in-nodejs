@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe 'ack.js', type: :aruba  do
   let(:command) { 'ack.js' }
